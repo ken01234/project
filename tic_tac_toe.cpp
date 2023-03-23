@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool hcheck(vector<vector<char> > v){
+bool hcheck(vector<vector<char> > v){//checks the box for any 3 in a row in the horizontal dimension 
     int count=0;
     for(int i=0;i<3;i++){
         count=0;
@@ -23,7 +23,7 @@ bool hcheck(vector<vector<char> > v){
     }return false;
     
 }
-bool vcheck(vector<vector<char> > v){
+bool vcheck(vector<vector<char> > v){// checks the box for any 3 in a row in the vertical dimension
     int count=0;
     for(int i=0;i<3;i++){
         int count=0;
@@ -40,7 +40,7 @@ bool vcheck(vector<vector<char> > v){
     }return false;
     
 }
-bool dcheck(vector<vector<char> > v){
+bool dcheck(vector<vector<char> > v){//checks the box for any 3 in a row in the diagnol direction 
     if((v[0][0]==v[1][1])&&(v[0][0]==v[2][2])&&(v[1][1]!='*')){
         return true;
     }
@@ -50,7 +50,7 @@ bool dcheck(vector<vector<char> > v){
         return false;
     }
 }
-vector<vector<char> > bot(vector<vector<char> >v){
+vector<vector<char> > bot(vector<vector<char> >v){// The bot for single player mode
     int count=0;
     int n1,n2;
     int c=0;
@@ -136,11 +136,11 @@ return v;
 }
 
 
-int main(){
+int main(){//input 1 for single player and 2 for multiplayer (on one device)
     vector<char> row;
     vector<vector<char> > box;
     vector<string> say;
-    say.push_back("BOT: I'm gonna win next time ");
+    say.push_back("BOT: I'm gonna win next time ");// things the bot could say
     say.push_back("BOT: I should have seen that coming");
     say.push_back("BOT: NOOOOOOOOOOOOOO");
 
